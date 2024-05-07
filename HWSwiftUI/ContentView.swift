@@ -15,7 +15,7 @@ struct ContentView: View {
         
         Text("Let's go")
             .font(.title)
-        NavigationView {
+        NavigationStack {
             ForEach(apps, id: \.self.title) {app in
                 app
             }

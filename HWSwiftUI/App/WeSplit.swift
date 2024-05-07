@@ -17,13 +17,23 @@ struct WeSplit: View {
     
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
-        let tipSelection = Double(tipPercentage)
         
-        let tipValue = checkAmount / 100 * tipSelection
-        let grandTotal = checkAmount + tipValue
+        
         let amountPerPerson = grandTotal / peopleCount
         
         return amountPerPerson
+    }
+    
+    var tipValue: Double {
+        let tipSelection = Double(tipPercentage)
+        
+        let tipValue = checkAmount / 100 * tipSelection
+        
+        return tipValue
+    }
+    
+    var grandTotal: Double {
+        return checkAmount + tipValue
     }
 
     var body: some View {
@@ -53,10 +63,41 @@ struct WeSplit: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                    Text("OR")
+                        .font(.title2)
+                    NavigationStack {
+                        Picker("Set yourself", selection: $tipPercentage) {
+                            ForEach(0..<101) {
+                                Text($0, format: .percent)
+                            }
+                        }
+                        .pickerStyle(.navigationLink)
+                    }
                 }
                 
                 Section("Total Per Person") {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+                }
+                .font(.title)
+                
+                Section("Details of Reciepe") {
+                    HStack {
+                        Text("Original amount:")
+                        Spacer()
+                        Text(checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+                    }
+                    
+                    HStack {
+                        Text("Tip:")
+                        Spacer()
+                        Text(tipValue, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+                    }
+                    
+                    HStack {
+                        Text("Original amount plus tip:")
+                        Spacer()
+                        Text(grandTotal, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+                    }
                 }
             }
             .navigationTitle("We Split")
