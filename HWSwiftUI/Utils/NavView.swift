@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct NavView: View {
+struct NavView<Destination:View>: View {
     var title = "Press"
-    var destination = Placeholder()
+    var destination: Destination
     
     var body: some View {
             VStack {
-                NavigationLink(title, destination: destination)
+                NavigationLink(destination: destination, label: {
+                    Text(title)
+                })//(title, destination: destination)
                     .padding(8)
                     .background(.green)
                     .foregroundColor(.white)
@@ -26,8 +28,4 @@ struct Placeholder: View {
     var body: some View {
         Text("placeholder")
     }
-}
-
-#Preview {
-    NavView()
 }

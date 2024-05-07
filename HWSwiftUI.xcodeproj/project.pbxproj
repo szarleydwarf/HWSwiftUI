@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50154312BEA7CA200AA20B8 /* WeSplit.swift */; };
 		D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */; };
 		D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42CE2BEA34AE001EB371 /* ContentView.swift */; };
 		D59A42D12BEA34B0001EB371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59A42D02BEA34B0001EB371 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D50154312BEA7CA200AA20B8 /* WeSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplit.swift; sourceTree = "<group>"; };
 		D59A42C92BEA34AE001EB371 /* HWSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSwiftUIApp.swift; sourceTree = "<group>"; };
 		D59A42CE2BEA34AE001EB371 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D50154302BEA7C9500AA20B8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D50154312BEA7CA200AA20B8 /* WeSplit.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		D59A42C02BEA34AE001EB371 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		D59A42CB2BEA34AE001EB371 /* HWSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D50154302BEA7C9500AA20B8 /* App */,
 				D59A42DE2BEA6F1B001EB371 /* Utils */,
 				D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */,
 				D59A42CE2BEA34AE001EB371 /* ContentView.swift */,
@@ -150,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */,
 				D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */,
 				D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */,
