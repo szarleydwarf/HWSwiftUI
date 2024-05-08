@@ -12,16 +12,16 @@ struct NavView<Destination:View>: View {
     var destination: Destination
     
     var body: some View {
-            VStack {
-                NavigationLink(destination: destination, label: {
-                    Text(title)
-                })//(title, destination: destination)
-                    .padding(8)
-                    .background(.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(25)
-            }
+        VStack {
+            NavigationLink(destination: destination, label: {
+                Text(title)
+            })
+            .frame(width: 170, height: 50, alignment: .center)
+            .background(.green)
+            .foregroundColor(.white)
+            .cornerRadius(25)
         }
+    }
 }
 
 struct Placeholder: View {

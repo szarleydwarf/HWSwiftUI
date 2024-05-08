@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    let apps = [
-        NavView(title: "We Split", destination: WeSplit())
-    ]
+    
     var body: some View {
         
         Text("Let's go")
             .font(.title)
         NavigationStack {
-            ForEach(apps, id: \.self.title) {app in
-                app
+            HStack {
+                NavView(title: "We Split", destination: WeSplit())
+                NavView(title: "Guess the Flag", destination: GuessTheFlag())
             }
         }
     }
