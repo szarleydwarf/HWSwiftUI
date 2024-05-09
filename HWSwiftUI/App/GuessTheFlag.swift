@@ -9,7 +9,10 @@ import SwiftUI
 
 struct GuessTheFlag: View {
     @State private var showingScore = false
+    @State private var showingEndGame = false
     @State private var scoreTitle = ""
+    @State private var score = 0
+    @State private var questionCount = 0
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland",
                      "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
@@ -32,9 +35,9 @@ struct GuessTheFlag: View {
                 
                 VStack(spacing: 15) {
                     VStack {
-                        Text("\(correctAnswer) Tap flag of")
+                        Text("Tap flag of")
                             .foregroundStyle(.secondary)
-                            .font(.subheadline.weight(.heavy))
+                            .font(.headline.weight(.heavy))
                         Text(countries[correctAnswer])
                             .foregroundStyle(.primary)
                             .font(.largeTitle.weight(.semibold))
@@ -46,10 +49,14 @@ struct GuessTheFlag: View {
                         Button {
                             print("Number: \(number)")
                             flagTapped(number)
+                            checkScore(number)
                         } label: {
                             Image(countries[number])
                                 .clipShape(.capsule)
                                 .shadow(radius: 5)
+                        }
+                        .alert("Game Over\nYour total score is \(score)", isPresented: $showingEndGame) {
+                            Button("Reset Game", action: resetGame)
                         }
                     }
                 }
@@ -61,7 +68,7 @@ struct GuessTheFlag: View {
                 Spacer()
                 Spacer()
                 
-                Text("Score: ???")
+                Text("Score: \(score)")
                     .foregroundStyle(.white)
                     .font(.title.bold())
             }
@@ -72,7 +79,7 @@ struct GuessTheFlag: View {
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Again", action: askQuestion)
         } message: {
-            Text("Your score is ???")
+            Text("Your score is \(score)")
         }
     }
     
@@ -80,15 +87,40 @@ struct GuessTheFlag: View {
         if number == correctAnswer {
             scoreTitle = "Correct"
         } else {
-            scoreTitle = "Ups! Try again"
+            scoreTitle = "Ups!\nThats flag of \(countries[number]) \nTry again"
         }
         
         showingScore = true
     }
     
+    func checkScore(_ number: Int) {
+        if number == correctAnswer {
+            score += 1
+        } else {
+            if score > 0 {
+                score -= 1
+            }
+        }
+    }
+    
+    func nextRoundOrReset() {
+        if questionCount > 7 {
+            showingEndGame = true
+        }
+        questionCount += 1
+    }
+    
+    func resetGame() {
+        questionCount = 0
+        score = 0
+    }
+    
     func askQuestion() {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
+        nextRoundOrReset()
+        if !showingEndGame {
+            countries.shuffle()
+            correctAnswer = Int.random(in: 0...2)
+        }
     }
 }
 
