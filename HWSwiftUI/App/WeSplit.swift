@@ -18,7 +18,6 @@ struct WeSplit: View {
     var totalPerPerson: Double {
         let peopleCount = Double(numberOfPeople + 2)
         
-        
         let amountPerPerson = grandTotal / peopleCount
         
         return amountPerPerson
@@ -34,6 +33,10 @@ struct WeSplit: View {
     
     var grandTotal: Double {
         return checkAmount + tipValue
+    }
+    
+    var isZeroPercent: Bool {
+        tipPercentage == 0
     }
 
     var body: some View {
@@ -60,15 +63,17 @@ struct WeSplit: View {
                     Picker("Tip percentage", selection: $tipPercentage) {
                         ForEach(tipPercentages, id:\.self) {
                             Text($0, format: .percent)
+                                .redOrPrime(trueOrFalse: isZeroPercent)
                         }
                     }
                     .pickerStyle(.segmented)
                     Text("OR")
-                        .font(.title2)
+                        .titleBlueStyle()
                     NavigationStack {
                         Picker("Set yourself", selection: $tipPercentage) {
                             ForEach(0..<101) {
                                 Text($0, format: .percent)
+                                    .redOrPrime(trueOrFalse: isZeroPercent)
                             }
                         }
                         .pickerStyle(.navigationLink)
@@ -77,8 +82,9 @@ struct WeSplit: View {
                 
                 Section("Total Per Person") {
                     Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+                        .font(.body)
                 }
-                .font(.title)
+                .titleBlueStyle()
                 
                 Section("Details of Reciepe") {
                     HStack {
@@ -88,7 +94,13 @@ struct WeSplit: View {
                     }
                     
                     HStack {
-                        Text("Tip:")
+                        Text("Tip % :")
+                        Spacer()
+                        Text(tipPercentage, format: .percent)
+                            .redOrPrime(trueOrFalse: isZeroPercent)
+                    }
+                    HStack {
+                        Text("Tip amount:")
                         Spacer()
                         Text(tipValue, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
                     }

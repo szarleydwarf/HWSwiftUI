@@ -12,6 +12,9 @@
 		D53B871F2BEE58F2003B56AE /* Watermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B871E2BEE58F2003B56AE /* Watermark.swift */; };
 		D53B87222BEE5951003B56AE /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B87212BEE5951003B56AE /* GridStack.swift */; };
 		D53B87242BEE5A56003B56AE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B87232BEE5A56003B56AE /* Title.swift */; };
+		D53B87262BEE5EE9003B56AE /* WTFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B87252BEE5EE9003B56AE /* WTFColor.swift */; };
+		D53B87282BEE6106003B56AE /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B87272BEE6106003B56AE /* FlagImage.swift */; };
+		D53B872A2BEE6400003B56AE /* BlueTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B87292BEE6400003B56AE /* BlueTitle.swift */; };
 		D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */; };
 		D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */; };
 		D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42CE2BEA34AE001EB371 /* ContentView.swift */; };
@@ -27,6 +30,9 @@
 		D53B871E2BEE58F2003B56AE /* Watermark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watermark.swift; sourceTree = "<group>"; };
 		D53B87212BEE5951003B56AE /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
 		D53B87232BEE5A56003B56AE /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		D53B87252BEE5EE9003B56AE /* WTFColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTFColor.swift; sourceTree = "<group>"; };
+		D53B87272BEE6106003B56AE /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
+		D53B87292BEE6400003B56AE /* BlueTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTitle.swift; sourceTree = "<group>"; };
 		D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiers.swift; sourceTree = "<group>"; };
 		D59A42C92BEA34AE001EB371 /* HWSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				D53B871C2BEE58D1003B56AE /* CapsuleText.swift */,
+				D53B87272BEE6106003B56AE /* FlagImage.swift */,
 			);
 			path = "View+extensions";
 			sourceTree = "<group>";
@@ -73,6 +80,8 @@
 				D53B87212BEE5951003B56AE /* GridStack.swift */,
 				D53B871E2BEE58F2003B56AE /* Watermark.swift */,
 				D53B87232BEE5A56003B56AE /* Title.swift */,
+				D53B87252BEE5EE9003B56AE /* WTFColor.swift */,
+				D53B87292BEE6400003B56AE /* BlueTitle.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -195,12 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53B87262BEE5EE9003B56AE /* WTFColor.swift in Sources */,
+				D53B872A2BEE6400003B56AE /* BlueTitle.swift in Sources */,
 				D53B87242BEE5A56003B56AE /* Title.swift in Sources */,
 				D53B871F2BEE58F2003B56AE /* Watermark.swift in Sources */,
 				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D53B87222BEE5951003B56AE /* GridStack.swift in Sources */,
 				D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */,
 				D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */,
+				D53B87282BEE6106003B56AE /* FlagImage.swift in Sources */,
 				D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */,
 				D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */,
 				D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */,

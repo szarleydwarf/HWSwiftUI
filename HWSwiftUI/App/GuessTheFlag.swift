@@ -51,9 +51,7 @@ struct GuessTheFlag: View {
                             flagTapped(number)
                             checkScore(number)
                         } label: {
-                            Image(countries[number])
-                                .clipShape(.capsule)
-                                .shadow(radius: 5)
+                            FlagImage(countryName: countries[number])
                         }
                         .alert("Game Over\nYour total score is \(score)", isPresented: $showingEndGame) {
                             Button("Reset Game", action: resetGame)
