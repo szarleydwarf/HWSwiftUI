@@ -18,6 +18,9 @@ struct ContentView: View {
                 NavView(title: "We Split", destination: WeSplit())
                 NavView(title: "Guess the Flag", destination: GuessTheFlag())
             }
+            HStack {
+                NavView(title: "Views And Modifiers", destination: ViewsAndModifiers())
+            }
         }
     }
 }
