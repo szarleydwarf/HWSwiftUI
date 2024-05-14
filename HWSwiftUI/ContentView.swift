@@ -20,6 +20,7 @@ struct ContentView: View {
             }
             HStack {
                 NavView(title: "Views And Modifiers", destination: ViewsAndModifiers())
+                NavView(title: "Better Rest", destination: BetterRest())
             }
         }
     }
