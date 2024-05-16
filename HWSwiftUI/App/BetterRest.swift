@@ -16,6 +16,7 @@ struct BetterRest: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showingAlert = false
+    @State private var recomendedBedtime = "22:00"
     
     let paddingValue = 40.0
     
@@ -28,25 +29,32 @@ struct BetterRest: View {
     
     var body: some View {
         NavigationStack {
+            PurpleHeadLine(text: "Your recomended bedtime is : \(recomendedBedtime)")
             Form {
-                VStack(alignment: .leading, spacing: 10) {
-                    PurpleHeadLine(text: "When you want to wake up?")
-                    
+                Section("When you want to wake up?") {
                     DatePicker("Enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
                         .labelsHidden()
                 }
+                .foregroundColor(.purple)
                 
-                VStack(alignment: .leading, spacing: 0) {
-                    PurpleHeadLine(text: "Desired amount of sleep")
+                Section("Desired amount of sleep") {
                     Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4.0...12.0, step: 0.25)
                         .padding([.trailing], paddingValue)
+                        .foregroundColor(.primary)
                 }
+                .foregroundColor(.purple)
                 
-                VStack(alignment: .leading, spacing: 0) {
-                    PurpleHeadLine(text: "Daily coffee intake")
-                    Stepper("^[\(coffeeAmount) cup](inflect:true)", value: $coffeeAmount, in: 1...20)
-                        .padding([.trailing], paddingValue)
+                Section( "Daily coffee intake") {
+
+                    Picker("^[\(coffeeAmount) cup](inflect:true)", selection: $coffeeAmount) {
+                        ForEach(0..<21) {
+                            Text("\($0)")
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .foregroundColor(.primary)
                 }
+                .foregroundColor(.purple)
             }
             .navigationTitle("Better Rest")
             .toolbar {
@@ -57,7 +65,16 @@ struct BetterRest: View {
             } message: {
                 Text(alertMessage)
             }
-
+            .onChange(of: wakeUp) {
+                calculateBedtime()
+            }
+            .onChange(of: sleepAmount) {
+                calculateBedtime()
+            }
+            .onChange(of: coffeeAmount) {
+                calculateBedtime()
+            }
+            
         }
     }
     
@@ -74,17 +91,14 @@ struct BetterRest: View {
             let prediction = try model.prediction(wake: Double(hour + minutes), estimatedSleep: sleepAmount, coffee: Double(coffeeAmount))
             
             let sleepTime = wakeUp - prediction.actualSleep
-            
-            alertTitle = "Your ideal bedtime is..."
-            alertMessage = sleepTime.formatted(date: .omitted, time: .shortened)
-            
+            recomendedBedtime = sleepTime.formatted(date: .omitted, time: .shortened)
+
         } catch {
             print("MLM ERR: \(error.localizedDescription)")
             alertTitle = "Oh no! We got an error"
             alertMessage = "Sorry, there was a problem calculating your bedtime"
+            showingAlert = true
         }
-        
-        showingAlert = true
     }
 }
 
