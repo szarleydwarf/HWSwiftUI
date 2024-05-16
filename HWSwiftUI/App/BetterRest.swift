@@ -29,7 +29,9 @@ struct BetterRest: View {
     
     var body: some View {
         NavigationStack {
-            PurpleHeadLine(text: "Your recomended bedtime is : \(recomendedBedtime)")
+            PurpleHeadLine(text: "Your recomended bedtime is")
+            Text("\(recomendedBedtime)")
+                .modifier(Title())
             Form {
                 Section("When you want to wake up?") {
                     DatePicker("Enter a time", selection: $wakeUp, displayedComponents: .hourAndMinute)
@@ -58,7 +60,9 @@ struct BetterRest: View {
             }
             .navigationTitle("Better Rest")
             .toolbar {
-                Button("Calculate", action: calculateBedtime)
+                Button("Calculate", action: {
+                    calculateBedtime(true)
+                })
             }
             .alert(alertTitle, isPresented: $showingAlert) {
                 Button("OK") { }
@@ -66,19 +70,19 @@ struct BetterRest: View {
                 Text(alertMessage)
             }
             .onChange(of: wakeUp) {
-                calculateBedtime()
+                calculateBedtime(false)
             }
             .onChange(of: sleepAmount) {
-                calculateBedtime()
+                calculateBedtime(false)
             }
             .onChange(of: coffeeAmount) {
-                calculateBedtime()
+                calculateBedtime(false)
             }
             
         }
     }
     
-    func calculateBedtime() {
+    func calculateBedtime(_ wasButtonPressed: Bool) {
         print("CALC: \(sleepAmount)-\(coffeeAmount)-\(wakeUp)")
         do {
             let config = MLModelConfiguration()
@@ -93,12 +97,15 @@ struct BetterRest: View {
             let sleepTime = wakeUp - prediction.actualSleep
             recomendedBedtime = sleepTime.formatted(date: .omitted, time: .shortened)
 
+            alertTitle = "Your ideal bedtime is..."
+            alertMessage = recomendedBedtime
+            
         } catch {
             print("MLM ERR: \(error.localizedDescription)")
             alertTitle = "Oh no! We got an error"
             alertMessage = "Sorry, there was a problem calculating your bedtime"
-            showingAlert = true
         }
+        showingAlert = wasButtonPressed ? true : false
     }
 }
 
