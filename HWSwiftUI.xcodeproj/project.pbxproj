@@ -20,12 +20,14 @@
 		D53B87312BEE6D70003B56AE /* BetterRest.csv in Resources */ = {isa = PBXBuildFile; fileRef = D53B872F2BEE6D70003B56AE /* BetterRest.csv */; };
 		D54EDBAB2BF3A64B00646972 /* PurpleHeadLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EDBAA2BF3A64B00646972 /* PurpleHeadLine.swift */; };
 		D5764A4E2BF3AD4000DCD0D5 /* SleepCalculator.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = D5764A4D2BF3AD4000DCD0D5 /* SleepCalculator.mlproj */; };
+		D576E6F32BF65A9500D2F979 /* WordScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576E6F22BF65A9500D2F979 /* WordScramble.swift */; };
 		D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */; };
 		D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */; };
 		D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42CE2BEA34AE001EB371 /* ContentView.swift */; };
 		D59A42D12BEA34B0001EB371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59A42D02BEA34B0001EB371 /* Assets.xcassets */; };
 		D59A42D52BEA34B0001EB371 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D59A42D42BEA34B0001EB371 /* Preview Assets.xcassets */; };
 		D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42DF2BEA6F34001EB371 /* NavView.swift */; };
+		D5A136242BF7AC2A005ED8B8 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5A136232BF7AC2A005ED8B8 /* start.txt */; };
 		D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,7 @@
 		D53B872F2BEE6D70003B56AE /* BetterRest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BetterRest.csv; sourceTree = "<group>"; };
 		D54EDBAA2BF3A64B00646972 /* PurpleHeadLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleHeadLine.swift; sourceTree = "<group>"; };
 		D5764A4D2BF3AD4000DCD0D5 /* SleepCalculator.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SleepCalculator.mlproj; sourceTree = "<group>"; };
+		D576E6F22BF65A9500D2F979 /* WordScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScramble.swift; sourceTree = "<group>"; };
 		D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiers.swift; sourceTree = "<group>"; };
 		D59A42C92BEA34AE001EB371 /* HWSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HWSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HWSwiftUIApp.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		D59A42D22BEA34B0001EB371 /* HWSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HWSwiftUI.entitlements; sourceTree = "<group>"; };
 		D59A42D42BEA34B0001EB371 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D59A42DF2BEA6F34001EB371 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
+		D5A136232BF7AC2A005ED8B8 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +76,7 @@
 				D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */,
 				D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */,
 				D53B872B2BEE6C41003B56AE /* BetterRest.swift */,
+				D576E6F22BF65A9500D2F979 /* WordScramble.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D5764A4D2BF3AD4000DCD0D5 /* SleepCalculator.mlproj */,
+				D5A136232BF7AC2A005ED8B8 /* start.txt */,
 				D53B872F2BEE6D70003B56AE /* BetterRest.csv */,
 				D53B872E2BEE6D70003B56AE /* SleepCalculator.mlmodel */,
 			);
@@ -219,6 +225,7 @@
 				D53B87312BEE6D70003B56AE /* BetterRest.csv in Resources */,
 				D59A42D12BEA34B0001EB371 /* Assets.xcassets in Resources */,
 				D5764A4E2BF3AD4000DCD0D5 /* SleepCalculator.mlproj in Resources */,
+				D5A136242BF7AC2A005ED8B8 /* start.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +241,7 @@
 				D53B872A2BEE6400003B56AE /* BlueTitle.swift in Sources */,
 				D53B87242BEE5A56003B56AE /* Title.swift in Sources */,
 				D53B871F2BEE58F2003B56AE /* Watermark.swift in Sources */,
+				D576E6F32BF65A9500D2F979 /* WordScramble.swift in Sources */,
 				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D53B872C2BEE6C41003B56AE /* BetterRest.swift in Sources */,
 				D53B87222BEE5951003B56AE /* GridStack.swift in Sources */,

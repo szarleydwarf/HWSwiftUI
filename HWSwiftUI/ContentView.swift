@@ -22,6 +22,10 @@ struct ContentView: View {
                 NavView(title: "Views And Modifiers", destination: ViewsAndModifiers())
                 NavView(title: "Better Rest", destination: BetterRest())
             }
+            HStack {
+                NavView(title: "Word Scramble", destination: WordScramble())
+                
+            }
         }
     }
 }

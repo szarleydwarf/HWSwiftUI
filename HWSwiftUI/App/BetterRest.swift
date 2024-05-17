@@ -52,9 +52,9 @@ struct BetterRest: View {
                         ForEach(0..<21) {
                             Text("\($0)")
                         }
+                        .foregroundColor(.primary)
                     }
                     .pickerStyle(.menu)
-                    .foregroundColor(.primary)
                 }
                 .foregroundColor(.purple)
             }
