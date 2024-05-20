@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct WordScramble: View {
+    
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
+    @FocusState private var isFocused: Bool
     
     @State private var errorTitle = ""
     @State private var errorMessage = ""
@@ -22,6 +25,11 @@ struct WordScramble: View {
                 Section {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.never)
+                        .focused($isFocused)
+                }
+                
+                Section {
+                    Text("Your score: \(score)")
                 }
                 
                 Section {
@@ -35,6 +43,11 @@ struct WordScramble: View {
             }
             .navigationTitle(rootWord)
             .onSubmit(addNewWord)
+            .toolbar {
+                Button("New Game") {
+                    startGame()
+                }
+            }
         }
         .onAppear(perform: startGame)
         .alert(errorTitle, isPresented: $showingError) {} message: {
@@ -45,7 +58,15 @@ struct WordScramble: View {
     
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
-        guard answer.count > 0 else {return}
+        guard isLongerThan2Chars(word: answer)  else {
+            wordError(title: "Word to short.", message: "Word must be at least 3 characters long.")
+            return
+        }
+        guard isNotRootWord(word: answer)  else {
+            wordError(title: "Root Word.", message: "This is Root word. Be more original.")
+            return
+        }
+        
         guard isOriginal(word: answer) else {
             wordError(title: "Word used already", message: "Be more original")
             return
@@ -61,10 +82,25 @@ struct WordScramble: View {
             return
         }
         
+        setScore(number: answer.count + 1)
+        
         withAnimation {
             usedWords.insert(answer, at: 0)
+            isFocused = true
         }
         newWord = ""
+    }
+    
+    func setScore(number: Int) {
+        score += number
+    }
+    
+    func isLongerThan2Chars(word: String) -> Bool {
+        word.count > 2
+    }
+    
+    func isNotRootWord(word: String) -> Bool  {
+        !word.elementsEqual(rootWord)
     }
     
     func isOriginal(word: String) -> Bool {
@@ -102,6 +138,7 @@ struct WordScramble: View {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
                 rootWord = allWords.randomElement() ?? "silkworm"
+                isFocused = true
                 return
             }
         }
