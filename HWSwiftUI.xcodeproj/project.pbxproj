@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50154312BEA7CA200AA20B8 /* WeSplit.swift */; };
+		D51B9E2B2BFCECE100C5B2DC /* ImplExplAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B9E2A2BFCECE100C5B2DC /* ImplExplAnimations.swift */; };
+		D51B9E2D2BFCED3400C5B2DC /* GesturesAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B9E2C2BFCED3400C5B2DC /* GesturesAnimations.swift */; };
+		D51B9E2F2BFCF7D300C5B2DC /* CornerRotateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B9E2E2BFCF7D300C5B2DC /* CornerRotateModifier.swift */; };
 		D53B871D2BEE58D1003B56AE /* CapsuleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B871C2BEE58D1003B56AE /* CapsuleText.swift */; };
 		D53B871F2BEE58F2003B56AE /* Watermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B871E2BEE58F2003B56AE /* Watermark.swift */; };
 		D53B87222BEE5951003B56AE /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53B87212BEE5951003B56AE /* GridStack.swift */; };
@@ -29,10 +32,14 @@
 		D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42DF2BEA6F34001EB371 /* NavView.swift */; };
 		D5A136242BF7AC2A005ED8B8 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5A136232BF7AC2A005ED8B8 /* start.txt */; };
 		D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */; };
+		D5C006AF2BFB9A8E00CE238F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C006AE2BFB9A8E00CE238F /* Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D50154312BEA7CA200AA20B8 /* WeSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplit.swift; sourceTree = "<group>"; };
+		D51B9E2A2BFCECE100C5B2DC /* ImplExplAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplExplAnimations.swift; sourceTree = "<group>"; };
+		D51B9E2C2BFCED3400C5B2DC /* GesturesAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesAnimations.swift; sourceTree = "<group>"; };
+		D51B9E2E2BFCF7D300C5B2DC /* CornerRotateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRotateModifier.swift; sourceTree = "<group>"; };
 		D53B871C2BEE58D1003B56AE /* CapsuleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleText.swift; sourceTree = "<group>"; };
 		D53B871E2BEE58F2003B56AE /* Watermark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watermark.swift; sourceTree = "<group>"; };
 		D53B87212BEE5951003B56AE /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 		D59A42DF2BEA6F34001EB371 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		D5A136232BF7AC2A005ED8B8 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlag.swift; sourceTree = "<group>"; };
+		D5C006AE2BFB9A8E00CE238F /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,18 @@
 				D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */,
 				D53B872B2BEE6C41003B56AE /* BetterRest.swift */,
 				D576E6F22BF65A9500D2F979 /* WordScramble.swift */,
+				D5C006AE2BFB9A8E00CE238F /* Animations.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		D51B9E292BFCECD000C5B2DC /* ExtraViews */ = {
+			isa = PBXGroup;
+			children = (
+				D51B9E2A2BFCECE100C5B2DC /* ImplExplAnimations.swift */,
+				D51B9E2C2BFCED3400C5B2DC /* GesturesAnimations.swift */,
+			);
+			path = ExtraViews;
 			sourceTree = "<group>";
 		};
 		D53B871B2BEE58BA003B56AE /* View+extensions */ = {
@@ -99,6 +117,7 @@
 				D53B87232BEE5A56003B56AE /* Title.swift */,
 				D53B87252BEE5EE9003B56AE /* WTFColor.swift */,
 				D53B87292BEE6400003B56AE /* BlueTitle.swift */,
+				D51B9E2E2BFCF7D300C5B2DC /* CornerRotateModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -135,6 +154,7 @@
 			children = (
 				D53B87202BEE5936003B56AE /* Modifiers */,
 				D53B871B2BEE58BA003B56AE /* View+extensions */,
+				D51B9E292BFCECD000C5B2DC /* ExtraViews */,
 				D50154302BEA7C9500AA20B8 /* App */,
 				D59A42DE2BEA6F1B001EB371 /* Utils */,
 				D59A42CC2BEA34AE001EB371 /* HWSwiftUIApp.swift */,
@@ -244,12 +264,16 @@
 				D576E6F32BF65A9500D2F979 /* WordScramble.swift in Sources */,
 				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D53B872C2BEE6C41003B56AE /* BetterRest.swift in Sources */,
+				D51B9E2D2BFCED3400C5B2DC /* GesturesAnimations.swift in Sources */,
 				D53B87222BEE5951003B56AE /* GridStack.swift in Sources */,
 				D53B87302BEE6D70003B56AE /* SleepCalculator.mlmodel in Sources */,
 				D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */,
 				D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */,
 				D53B87282BEE6106003B56AE /* FlagImage.swift in Sources */,
+				D51B9E2B2BFCECE100C5B2DC /* ImplExplAnimations.swift in Sources */,
 				D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */,
+				D51B9E2F2BFCF7D300C5B2DC /* CornerRotateModifier.swift in Sources */,
+				D5C006AF2BFB9A8E00CE238F /* Animations.swift in Sources */,
 				D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */,
 				D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */,
 				D53B871D2BEE58D1003B56AE /* CapsuleText.swift in Sources */,
