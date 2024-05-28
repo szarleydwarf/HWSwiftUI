@@ -32,6 +32,7 @@
 		D5C4EC162C05C20800A4D65C /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC152C05C20800A4D65C /* Animations.swift */; };
 		D5C4EC192C05C24A00A4D65C /* Implicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC182C05C24A00A4D65C /* Implicit.swift */; };
 		D5C4EC1B2C05C66A00A4D65C /* AnimBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */; };
+		D5C4EC1D2C05C7D200A4D65C /* Explicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		D5C4EC152C05C20800A4D65C /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		D5C4EC182C05C24A00A4D65C /* Implicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implicit.swift; sourceTree = "<group>"; };
 		D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimBindings.swift; sourceTree = "<group>"; };
+		D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explicit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				D5C4EC182C05C24A00A4D65C /* Implicit.swift */,
 				D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */,
+				D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				D53B872A2BEE6400003B56AE /* BlueTitle.swift in Sources */,
 				D53B87242BEE5A56003B56AE /* Title.swift in Sources */,
 				D53B871F2BEE58F2003B56AE /* Watermark.swift in Sources */,
+				D5C4EC1D2C05C7D200A4D65C /* Explicit.swift in Sources */,
 				D576E6F32BF65A9500D2F979 /* WordScramble.swift in Sources */,
 				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D53B872C2BEE6C41003B56AE /* BetterRest.swift in Sources */,
