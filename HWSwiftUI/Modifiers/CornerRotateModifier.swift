@@ -2,7 +2,7 @@
 //  CornerRotateModifier.swift
 //  HWSwiftUI
 //
-//  Created by Radoslaw Chomik on 21/05/2024.
+//  Created by Radoslaw Chomik on 28/05/2024.
 //
 
 import SwiftUI

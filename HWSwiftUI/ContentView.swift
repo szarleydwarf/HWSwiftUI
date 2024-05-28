@@ -24,7 +24,7 @@ struct ContentView: View {
             }
             HStack {
                 NavView(title: "Word Scramble", destination: WordScramble())
-                NavView(title: "Animation", destination: Animations())
+                NavView(title: "Animations", destination: Animations())
             }
         }
     }

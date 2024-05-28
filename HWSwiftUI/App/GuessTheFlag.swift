@@ -9,23 +9,25 @@ import SwiftUI
 
 struct GuessTheFlag: View {
     @State private var showingScore = false
+    @State private var isFading = false
     @State private var showingEndGame = false
     @State private var scoreTitle = ""
     @State private var score = 0
     @State private var questionCount = 0
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland",
-                     "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
+                                    "Italy", "Nigeria", "Poland", "Spain", "UK", "Ukraine", "US"]
         .shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
+    @State private var animAmount = 1.0
     
     var body: some View {
         ZStack {
             RadialGradient(stops: [
                 .init(color: Color(red: 0.1, green: 0.2, blue: 0.45), location: 0.3),
                 .init(color: Color(red: 0.76, green: 0.15, blue: 0.26), location: 0.3),
-              ], center: .top, startRadius: 120, endRadius: 900)
-                .ignoresSafeArea()
+            ], center: .top, startRadius: 120, endRadius: 900)
+            .ignoresSafeArea()
             
             VStack {
                 Spacer()
@@ -56,12 +58,18 @@ struct GuessTheFlag: View {
                         .alert("Game Over\nYour total score is \(score)", isPresented: $showingEndGame) {
                             Button("Reset Game", action: resetGame)
                         }
+                        .rotation3DEffect(
+                            .degrees(number == correctAnswer ? animAmount : 0),
+                            axis: (x: 0.0, y: 1.0, z: 0.0)
+                        )
+                        .opacity((number != correctAnswer && isFading) ? 0.25 : 1)
+                        .scaleEffect((number != correctAnswer && isFading) ? 0.75 : 1)
                     }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
                 .background(.regularMaterial)
-            .clipShape(.rect(cornerRadius: 20))
+                .clipShape(.rect(cornerRadius: 20))
                 
                 Spacer()
                 Spacer()
@@ -84,6 +92,10 @@ struct GuessTheFlag: View {
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
+            withAnimation(.spring(duration: 1, bounce: 0.5)) {
+                animAmount += 360
+                isFading.toggle()
+            }
         } else {
             scoreTitle = "Ups!\nThats flag of \(countries[number]) \nTry again"
         }
@@ -106,11 +118,13 @@ struct GuessTheFlag: View {
             showingEndGame = true
         }
         questionCount += 1
+        isFading.toggle()
     }
     
     func resetGame() {
         questionCount = 0
         score = 0
+        isFading = false
     }
     
     func askQuestion() {
