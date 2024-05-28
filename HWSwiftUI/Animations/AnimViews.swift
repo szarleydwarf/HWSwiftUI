@@ -8,13 +8,38 @@
 import SwiftUI
 
 struct AnimViews: View {
-    @State private var isShowingView = false
-    
+    @State private var isShowingFirstView = false
+    @State private var isShowingSecondView = false
+    @State private var enabled = false
+
     var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.red)
+                .frame(width: 200, height: 200)
+        
+            if isShowingSecondView {
+                Rectangle()
+                    .fill(.white)
+                    .frame(width: 200, height: 200)
+                    .transition(.pivot)
+            
+            }
+            Text("Tap me")
+                .font(.largeTitle)
+                .foregroundStyle(enabled ? .black : .white)
+        }
+        .onTapGesture {
+            withAnimation {
+                isShowingSecondView.toggle()
+                enabled.toggle()
+            }
+        }
+        
         VStack {
             Button("Tap") {
                 withAnimation {
-                    isShowingView.toggle()
+                    isShowingFirstView.toggle()
                 }
             }
             .padding(20)
@@ -22,13 +47,15 @@ struct AnimViews: View {
             .foregroundStyle(.white)
             .clipShape(.rect(cornerRadius: 10))
  
-            if isShowingView {
+            if isShowingFirstView {
                 Rectangle()
                     .fill(.purple)
                     .frame(width: 200, height: 200)
-//                    .transition(.scale)
+                //                    .transition(.scale)
                     .transition(.asymmetric(insertion: .scale, removal: .opacity))
             }
+            
+            
         }
     }
 }

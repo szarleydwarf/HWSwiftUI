@@ -36,6 +36,7 @@
 		D5C4EC1F2C05C90500A4D65C /* AnimStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */; };
 		D5C4EC212C05D08E00A4D65C /* AnimGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC202C05D08E00A4D65C /* AnimGestures.swift */; };
 		D5C4EC232C05DDE700A4D65C /* AnimViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC222C05DDE700A4D65C /* AnimViews.swift */; };
+		D5C4EC252C05DFCF00A4D65C /* CornerRotateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC242C05DFCF00A4D65C /* CornerRotateModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimStack.swift; sourceTree = "<group>"; };
 		D5C4EC202C05D08E00A4D65C /* AnimGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimGestures.swift; sourceTree = "<group>"; };
 		D5C4EC222C05DDE700A4D65C /* AnimViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimViews.swift; sourceTree = "<group>"; };
+		D5C4EC242C05DFCF00A4D65C /* CornerRotateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRotateModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				D53B87232BEE5A56003B56AE /* Title.swift */,
 				D53B87252BEE5EE9003B56AE /* WTFColor.swift */,
 				D53B87292BEE6400003B56AE /* BlueTitle.swift */,
+				D5C4EC242C05DFCF00A4D65C /* CornerRotateModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				D5C4EC232C05DDE700A4D65C /* AnimViews.swift in Sources */,
 				D5C4EC212C05D08E00A4D65C /* AnimGestures.swift in Sources */,
 				D53B871D2BEE58D1003B56AE /* CapsuleText.swift in Sources */,
+				D5C4EC252C05DFCF00A4D65C /* CornerRotateModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
