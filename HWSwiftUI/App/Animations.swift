@@ -20,7 +20,7 @@ struct Animations: View {
             }
             HStack {
                 NavView(title: "Gestures", destination: AnimGestures())
-//                NavView(title: "Animation Stack", destination: AnimStack())
+                NavView(title: "View Dis/Appearance", destination: AnimViews())
             }
         }
     }
