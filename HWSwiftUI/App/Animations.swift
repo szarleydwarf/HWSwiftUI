@@ -12,7 +12,15 @@ struct Animations: View {
         NavigationStack {
             HStack {
                 NavView(title: "Implicit", destination: Implicit())
-                NavView(title: "Guess the Flag", destination: GuessTheFlag())
+                NavView(title: "Animation Bindings", destination: AnimBindings())
+            }
+            HStack {
+                NavView(title: "Explicit", destination: Explicit())
+                NavView(title: "Animation Stack", destination: AnimStack())
+            }
+            HStack {
+                NavView(title: "Gestures", destination: AnimGestures())
+//                NavView(title: "Animation Stack", destination: AnimStack())
             }
         }
     }

@@ -34,6 +34,7 @@
 		D5C4EC1B2C05C66A00A4D65C /* AnimBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */; };
 		D5C4EC1D2C05C7D200A4D65C /* Explicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */; };
 		D5C4EC1F2C05C90500A4D65C /* AnimStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */; };
+		D5C4EC212C05D08E00A4D65C /* AnimGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC202C05D08E00A4D65C /* AnimGestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimBindings.swift; sourceTree = "<group>"; };
 		D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explicit.swift; sourceTree = "<group>"; };
 		D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimStack.swift; sourceTree = "<group>"; };
+		D5C4EC202C05D08E00A4D65C /* AnimGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimGestures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */,
 				D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */,
 				D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */,
+				D5C4EC202C05D08E00A4D65C /* AnimGestures.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				D5C4EC162C05C20800A4D65C /* Animations.swift in Sources */,
 				D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */,
 				D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */,
+				D5C4EC212C05D08E00A4D65C /* AnimGestures.swift in Sources */,
 				D53B871D2BEE58D1003B56AE /* CapsuleText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
