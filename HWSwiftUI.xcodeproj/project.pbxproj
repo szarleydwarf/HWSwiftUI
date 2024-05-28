@@ -33,6 +33,7 @@
 		D5C4EC192C05C24A00A4D65C /* Implicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC182C05C24A00A4D65C /* Implicit.swift */; };
 		D5C4EC1B2C05C66A00A4D65C /* AnimBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */; };
 		D5C4EC1D2C05C7D200A4D65C /* Explicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */; };
+		D5C4EC1F2C05C90500A4D65C /* AnimStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		D5C4EC182C05C24A00A4D65C /* Implicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implicit.swift; sourceTree = "<group>"; };
 		D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimBindings.swift; sourceTree = "<group>"; };
 		D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explicit.swift; sourceTree = "<group>"; };
+		D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				D5C4EC182C05C24A00A4D65C /* Implicit.swift */,
 				D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */,
 				D5C4EC1C2C05C7D200A4D65C /* Explicit.swift */,
+				D5C4EC1E2C05C90400A4D65C /* AnimStack.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */,
 				D53B87282BEE6106003B56AE /* FlagImage.swift in Sources */,
 				D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */,
+				D5C4EC1F2C05C90500A4D65C /* AnimStack.swift in Sources */,
 				D5C4EC162C05C20800A4D65C /* Animations.swift in Sources */,
 				D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */,
 				D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */,
