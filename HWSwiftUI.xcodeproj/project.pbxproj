@@ -31,6 +31,7 @@
 		D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */; };
 		D5C4EC162C05C20800A4D65C /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC152C05C20800A4D65C /* Animations.swift */; };
 		D5C4EC192C05C24A00A4D65C /* Implicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC182C05C24A00A4D65C /* Implicit.swift */; };
+		D5C4EC1B2C05C66A00A4D65C /* AnimBindings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlag.swift; sourceTree = "<group>"; };
 		D5C4EC152C05C20800A4D65C /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		D5C4EC182C05C24A00A4D65C /* Implicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implicit.swift; sourceTree = "<group>"; };
+		D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimBindings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D5C4EC182C05C24A00A4D65C /* Implicit.swift */,
+				D5C4EC1A2C05C66A00A4D65C /* AnimBindings.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				D53B87222BEE5951003B56AE /* GridStack.swift in Sources */,
 				D53B87302BEE6D70003B56AE /* SleepCalculator.mlmodel in Sources */,
 				D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */,
+				D5C4EC1B2C05C66A00A4D65C /* AnimBindings.swift in Sources */,
 				D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */,
 				D53B87282BEE6106003B56AE /* FlagImage.swift in Sources */,
 				D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */,
