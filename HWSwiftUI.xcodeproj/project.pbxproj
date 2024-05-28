@@ -29,6 +29,8 @@
 		D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59A42DF2BEA6F34001EB371 /* NavView.swift */; };
 		D5A136242BF7AC2A005ED8B8 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5A136232BF7AC2A005ED8B8 /* start.txt */; };
 		D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */; };
+		D5C4EC162C05C20800A4D65C /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC152C05C20800A4D65C /* Animations.swift */; };
+		D5C4EC192C05C24A00A4D65C /* Implicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C4EC182C05C24A00A4D65C /* Implicit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		D59A42DF2BEA6F34001EB371 /* NavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
 		D5A136232BF7AC2A005ED8B8 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		D5A5BDAB2BEB8C84002EED5F /* GuessTheFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlag.swift; sourceTree = "<group>"; };
+		D5C4EC152C05C20800A4D65C /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		D5C4EC182C05C24A00A4D65C /* Implicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Implicit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */,
 				D53B872B2BEE6C41003B56AE /* BetterRest.swift */,
 				D576E6F22BF65A9500D2F979 /* WordScramble.swift */,
+				D5C4EC152C05C20800A4D65C /* Animations.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			children = (
 				D53B871C2BEE58D1003B56AE /* CapsuleText.swift */,
 				D53B87272BEE6106003B56AE /* FlagImage.swift */,
+				D59A42DF2BEA6F34001EB371 /* NavView.swift */,
 				D54EDBAA2BF3A64B00646972 /* PurpleHeadLine.swift */,
 			);
 			path = "View+extensions";
@@ -133,6 +139,7 @@
 		D59A42CB2BEA34AE001EB371 /* HWSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D5C4EC172C05C24100A4D65C /* Animations */,
 				D53B87202BEE5936003B56AE /* Modifiers */,
 				D53B871B2BEE58BA003B56AE /* View+extensions */,
 				D50154302BEA7C9500AA20B8 /* App */,
@@ -158,9 +165,16 @@
 		D59A42DE2BEA6F1B001EB371 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D59A42DF2BEA6F34001EB371 /* NavView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D5C4EC172C05C24100A4D65C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D5C4EC182C05C24A00A4D65C /* Implicit.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +258,14 @@
 				D576E6F32BF65A9500D2F979 /* WordScramble.swift in Sources */,
 				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D53B872C2BEE6C41003B56AE /* BetterRest.swift in Sources */,
+				D5C4EC192C05C24A00A4D65C /* Implicit.swift in Sources */,
 				D53B87222BEE5951003B56AE /* GridStack.swift in Sources */,
 				D53B87302BEE6D70003B56AE /* SleepCalculator.mlmodel in Sources */,
 				D59A42E02BEA6F34001EB371 /* NavView.swift in Sources */,
 				D59A42CF2BEA34AE001EB371 /* ContentView.swift in Sources */,
 				D53B87282BEE6106003B56AE /* FlagImage.swift in Sources */,
 				D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */,
+				D5C4EC162C05C20800A4D65C /* Animations.swift in Sources */,
 				D59A42CD2BEA34AE001EB371 /* HWSwiftUIApp.swift in Sources */,
 				D5A5BDAC2BEB8C84002EED5F /* GuessTheFlag.swift in Sources */,
 				D53B871D2BEE58D1003B56AE /* CapsuleText.swift in Sources */,
