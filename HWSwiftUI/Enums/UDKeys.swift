@@ -11,7 +11,9 @@ enum UDKeys: String {
     case udExpense = "expenses"
 }
 
-enum ExpenseType: String {
+enum ExpenseType: String, CaseIterable, Identifiable, Codable {
     case personal = "personal"
     case business = "business"
+    
+    var id: String {self.rawValue}
 }

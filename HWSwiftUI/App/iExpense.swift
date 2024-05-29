@@ -10,23 +10,27 @@ import Observation
 
 struct iExpense: View {
     @State private var expenses = Expenses()
+    @State private var showingAddExpense = false
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(expenses.items) { item in
-                    Text(item.name)
+                    SingleExpenseView(expense: item)
                 }
                 .onDelete(perform: removeItem)
             }
             .toolbar{
                 Button("Add", systemImage: "plus") {
-                    let expense = ExpenseItem(name: "Test", type: .personal, amount: 5.0)
-                    expenses.items.append(expense)
+                    showingAddExpense = true
                 }
             }
+            .navigationTitle("iExpenses")
         }
-        .navigationTitle("Expenses")
+        .sheet(isPresented: $showingAddExpense) {
+            AddExpenseView(expenses: expenses)
+        }
+        
     }
     
     func removeItem(at offset: IndexSet) {
