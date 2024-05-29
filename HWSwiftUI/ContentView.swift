@@ -26,6 +26,10 @@ struct ContentView: View {
                 NavView(title: "Word Scramble", destination: WordScramble())
                 NavView(title: "Animations", destination: Animations())
             }
+            HStack {
+                NavView(title: "iExpense", destination: iExpense())
+                NavView(title: "Animations", destination: Animations())
+            }
         }
     }
 }
