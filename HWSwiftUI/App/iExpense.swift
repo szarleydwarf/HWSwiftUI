@@ -15,10 +15,23 @@ struct iExpense: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(expenses.items) { item in
-                    SingleExpenseView(expense: item)
+                Section("Personal") {
+                    ForEach(expenses.items) { item in
+                        if item.type == .personal {
+                            SingleExpenseView(expense: item)
+                        }
+                    }
+                    .onDelete(perform: removeItem)
                 }
-                .onDelete(perform: removeItem)
+                Section("Business") {
+                    ForEach(expenses.items) { item in
+                    
+                        if item.type == .business {
+                            SingleExpenseView(expense: item)
+                        }
+                    }
+                    .onDelete(perform: removeItem)
+                }
             }
             .toolbar{
                 Button("Add", systemImage: "plus") {

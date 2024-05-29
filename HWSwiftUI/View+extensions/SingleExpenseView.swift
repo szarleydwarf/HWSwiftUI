@@ -17,7 +17,56 @@ struct SingleExpenseView: View {
                 PurpleHeadLine(text: expense.type.rawValue)
             }
             Spacer()
-            Text(expense.amount, format: .currency(code: "GBP"))
+           
+            switch expense.amount {
+            case 0..<10:
+                SmallAmount(amount: expense.amount)
+            case 10..<100:
+                MediumAmount(amount: expense.amount)
+            case 100..<Double.infinity:
+                LargeAmount(amount: expense.amount)
+            default:
+                SmallAmount(amount: expense.amount)
+            }
         }
+    }
+}
+
+struct SmallAmount: View {
+    let amount: Double
+    
+    var body : some View {
+        Text(amount, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+            .font(.subheadline)
+            .foregroundColor(.white)
+            .padding(2)
+            .background(.green)
+            .clipShape(.rect(cornerRadius: 15))
+    }
+}
+
+struct MediumAmount: View {
+    let amount: Double
+    
+    var body : some View {
+        Text(amount, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+            .font(.subheadline)
+            .foregroundColor(.white)
+            .padding(4)
+            .background(.blue)
+            .clipShape(.rect(cornerRadius: 15))
+    }
+}
+
+struct LargeAmount: View {
+    let amount: Double
+    
+    var body : some View {
+        Text(amount, format: .currency(code: Locale.current.currency?.identifier ?? "GBP"))
+            .font(.subheadline)
+            .foregroundColor(.white)
+            .padding(6)
+            .background(.red)
+            .clipShape(.rect(cornerRadius: 15))
     }
 }
