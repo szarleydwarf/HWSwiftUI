@@ -28,7 +28,7 @@ struct ContentView: View {
             }
             HStack {
                 NavView(title: "iExpense", destination: iExpense())
-                NavView(title: "Animations", destination: Animations())
+                NavView(title: "Moonshot", destination: Moonshot())
             }
         }
     }

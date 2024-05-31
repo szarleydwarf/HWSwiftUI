@@ -20,6 +20,7 @@
 		D53B87302BEE6D70003B56AE /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D53B872E2BEE6D70003B56AE /* SleepCalculator.mlmodel */; };
 		D53B87312BEE6D70003B56AE /* BetterRest.csv in Resources */ = {isa = PBXBuildFile; fileRef = D53B872F2BEE6D70003B56AE /* BetterRest.csv */; };
 		D54EDBAB2BF3A64B00646972 /* PurpleHeadLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54EDBAA2BF3A64B00646972 /* PurpleHeadLine.swift */; };
+		D54F889E2C09F76700F27C5E /* Moonshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F889D2C09F76700F27C5E /* Moonshot.swift */; };
 		D5764A4E2BF3AD4000DCD0D5 /* SleepCalculator.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = D5764A4D2BF3AD4000DCD0D5 /* SleepCalculator.mlproj */; };
 		D576E6F32BF65A9500D2F979 /* WordScramble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D576E6F22BF65A9500D2F979 /* WordScramble.swift */; };
 		D57E1EA02BED121D00EBAC7D /* ViewsAndModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */; };
@@ -61,6 +62,7 @@
 		D53B872E2BEE6D70003B56AE /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculator.mlmodel; sourceTree = "<group>"; };
 		D53B872F2BEE6D70003B56AE /* BetterRest.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BetterRest.csv; sourceTree = "<group>"; };
 		D54EDBAA2BF3A64B00646972 /* PurpleHeadLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleHeadLine.swift; sourceTree = "<group>"; };
+		D54F889D2C09F76700F27C5E /* Moonshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moonshot.swift; sourceTree = "<group>"; };
 		D5764A4D2BF3AD4000DCD0D5 /* SleepCalculator.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SleepCalculator.mlproj; sourceTree = "<group>"; };
 		D576E6F22BF65A9500D2F979 /* WordScramble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScramble.swift; sourceTree = "<group>"; };
 		D57E1E9F2BED121D00EBAC7D /* ViewsAndModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsAndModifiers.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D576E6F22BF65A9500D2F979 /* WordScramble.swift */,
 				D5C4EC152C05C20800A4D65C /* Animations.swift */,
 				D5E93AB82C06353D00C8BA1D /* iExpense.swift */,
+				D54F889D2C09F76700F27C5E /* Moonshot.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				D5C2B33B2C073FE30067A00D /* SingleExpenseView.swift in Sources */,
 				D5C2B3322C0729B00067A00D /* ExpenseItem.swift in Sources */,
 				D5C2B3372C072AD40067A00D /* UDKeys.swift in Sources */,
+				D54F889E2C09F76700F27C5E /* Moonshot.swift in Sources */,
 				D50154322BEA7CA200AA20B8 /* WeSplit.swift in Sources */,
 				D5E93AB92C06353D00C8BA1D /* iExpense.swift in Sources */,
 				D53B872C2BEE6C41003B56AE /* BetterRest.swift in Sources */,
