@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddExpenseView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var name = ""
+    @State private var name = "Tap to change name"
     @State private var type = ExpenseType.personal
     @State private var amount = 0.0
     
@@ -18,8 +18,6 @@ struct AddExpenseView: View {
     var body: some View {
         NavigationStack {
             Form {
-                TextField("Name ", text: $name)
-                
                 Picker("Type: ", selection: $type) {
                     ForEach(ExpenseType.allCases) {expense in
                         Text(expense.rawValue)
@@ -30,7 +28,7 @@ struct AddExpenseView: View {
                 TextField("Amount", value: $amount, format: .currency(code: "GBP"))
                     .keyboardType(.decimalPad)
             }
-            .navigationTitle("Add New Expense")
+            .navigationTitle($name)
             .toolbar{
                 Button("Save", systemImage: "square.and.arrow.down") {
                     let item = ExpenseItem(name: name, type: type, amount: amount)

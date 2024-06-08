@@ -10,76 +10,32 @@
 import SwiftUI
 
 struct Moonshot: View {
+    @State private var showingList = false
+//    @State private var toggleMessage: String = "Show as List"
+    
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+    let missions: [Mission] = Bundle.main.decode("missions.json")    
+    
     var body: some View {
-        Button("Decode JSON") {
-            let input = """
-          {
-            "name": "Taylor Swift",
-            "address": {
-              "street": "555, Taylor Swift Avenue",
-              "city": "Nashville"
+        Toggle(isOn: $showingList) {}
+//            .labelsHidden()
+            .toggleStyle(HorizontalToggleStyle())
+            
+        Group {
+            if !showingList {
+                MoonshootGridLayout(astronauts: astronauts, missions: missions)
+//                toggleMessage = "pl"
+            } else {
+                MoonshootListLayout(astronauts: astronauts, missions: missions)
+//                toggleMessage = "ef"
             }
         }
-        """
-            let data = Data(input.utf8)
-            let decoder = JSONDecoder()
-            if let user = try? decoder.decode(User.self, from: data) {
-                print(user.address.street)
-            }
-        }
-        
-        let layout = [
-          GridItem(.adaptive(minimum: 80, maximum: 120)),
-        ]
-        
-        NavigationStack {
-            NavigationLink {
-                Text("tsap")
-                
-            } label: {
-                VStack {
-                    Text("label")
-                    Image(systemName: "face.smiling")
-                }
-            }
-            .navigationTitle("swiftui")
-            .font(.largeTitle)
-        }
-        Image(.ex)
-            .resizable()
-            .scaledToFit()
-            .containerRelativeFrame(.horizontal) { size, axis in
-                size * 0.8
-            }
-        
-        ScrollView {
-            LazyVGrid (columns: layout) {
-                ForEach(0..<100) {
-                    Text("Item: \($0)")
-                        .font(.body)
-                }
-            }
-            .frame(maxWidth: .infinity)
-        }
-        
-        Image(.ex)
-            .resizable()
-            .scaledToFill()
-            .containerRelativeFrame(.horizontal) { size, _ in
-                size * 0.8
-            }
+        .navigationTitle("Moonshot")
+        .padding(.bottom)
+        .preferredColorScheme(.dark)
     }
 }
 
 #Preview {
     Moonshot()
-}
-
-struct User: Codable {
-    let name: String
-    let address: Address
-}
-struct Address: Codable {
-    let street: String
-    let city: String
 }

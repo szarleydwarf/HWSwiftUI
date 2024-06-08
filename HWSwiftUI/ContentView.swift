@@ -11,7 +11,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        Text("Let's go")
+        Text("Hacking with SwiftUI")
             .font(.title)
         NavigationStack {
             HStack {
@@ -29,6 +29,10 @@ struct ContentView: View {
             HStack {
                 NavView(title: "iExpense", destination: iExpense())
                 NavView(title: "Moonshot", destination: Moonshot())
+            }
+            HStack {
+                NavView(title: "Navigation", destination: Navigation())
+                NavView(title: "placeholder", destination: Placeholder())
             }
         }
     }

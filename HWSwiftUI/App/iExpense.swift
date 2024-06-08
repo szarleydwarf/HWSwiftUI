@@ -34,15 +34,18 @@ struct iExpense: View {
                 }
             }
             .toolbar{
-                Button("Add", systemImage: "plus") {
-                    showingAddExpense = true
+
+                NavigationLink {
+                    AddExpenseView(expenses: expenses)
+                } label: {
+                    Label("Add", systemImage: "plus")
                 }
             }
             .navigationTitle("iExpenses")
         }
-        .sheet(isPresented: $showingAddExpense) {
-            AddExpenseView(expenses: expenses)
-        }
+//        .sheet(isPresented: $showingAddExpense) {
+//            AddExpenseView(expenses: expenses)
+//        }
         
     }
     
